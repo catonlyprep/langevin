@@ -7,11 +7,6 @@ to model a particle diffusing on a surface.
 
 ---
 
-## Contents
-
-+ [Installation](#installation)
-+ [Usage](#usage)
-
 ## Installation
 
 #### Dependencies

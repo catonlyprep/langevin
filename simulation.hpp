@@ -27,7 +27,7 @@
 #include <string>
 
 // PCG RNG
-#include "pcg_random.hpp"
+#include "pcg/pcg_random.hpp"
 
 // HDF5 library
 #include "H5Cpp.h"
