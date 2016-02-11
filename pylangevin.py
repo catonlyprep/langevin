@@ -96,7 +96,18 @@ class Langevin(object):
         """
         pos = np.asarray(self.initpos)
         cell = np.asarray(self.xcell + self.ycell)                       
-        result = self._Simulation(fname, self.pot, cell, pos, self.dt, self.temp, self.gamma, self.mass, int(nsteps), int(nsnapshots), self.seed)
+        result = self._Simulation(
+                        fname, 
+                        self.pot, 
+                        cell, 
+                        pos, 
+                        self.dt, 
+                        self.temp, 
+                        self.gamma, 
+                        self.mass, 
+                        int(nsteps),
+                        int(nsnapshots), 
+                        self.seed)
         return result      
 
     def load(self, fname):
