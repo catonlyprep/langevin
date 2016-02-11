@@ -54,7 +54,7 @@ $ ./langevin -o tests/test_trajectory2.h5 -p tests/test_potential.h5 \
              -t 500 -d 0.5 -n 10000000 -i 10000
 ```
 
-You can also specify a random seed using the flag `-r seed`.
+You can also specify a random seed using the flag `-r [seed]`.
 
 ## Tasks
 
