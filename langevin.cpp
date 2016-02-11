@@ -108,10 +108,7 @@ int main(int argc, const char * argv[]) {
 	opt.add("1", 1,	1, 0, "Number of steps", "-n", "-nsteps");
 	opt.add("1", 1,	1, 0, "Interval between saved steps", "-i", "-interval");
 	opt.add("0", 0,	1, 0, "Random seed", "-r", "-random");
-	
-	// Example usage
-	// ./langevin -o tests/test_trajectory2.h5 -p tests/test_potential.h5 -c 0,1,0,1 -s 0.5,0.0 -g 10 -m 63.456 -l 2.45 -t 500 -h 0.5 -r 1 -n 10000000 -i 10000
-	
+
 	// Check for errors
 	opt.parse(argc, argv);
 	if (opt.isSet("-h")) {

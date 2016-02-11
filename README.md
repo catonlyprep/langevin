@@ -44,7 +44,7 @@ simulation.run(outputfilename, nsteps, nsnapshots)
 
 ```bash
 $ ./langevin -o tests/test_trajectory2.h5 -p tests/test_potential.h5 \
-			 -c 0,1,0,1 -s 0.5,0.0 -g 10 -m 63.456 \
+			 -c 0.,1.,0.,1. -s 0.5,0.0 -g 10 -m 63.456 \
 			 -l 2.45 -t 500 -h 0.5 -r 1 -n 10000000 -i 10000
 ```
 
