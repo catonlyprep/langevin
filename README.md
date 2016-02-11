@@ -14,12 +14,12 @@ to model a particle diffusing on a surface.
 
 ## Installation
 
-**Dependencies**
+#### Dependencies
 
-The program uses interpolation functions from version 2.1 of the  **[GNU Scientific Library](https://www.gnu.org/software/gsl/)**,
+The Langevin simulator uses 2D interpolation functions from version 2.1 of the  **[GNU Scientific Library](https://www.gnu.org/software/gsl/)**,
 so please make sure you use the latest version.
 
-**Building from source**
+#### Building from source
 
 To build the library, unpack the source and `cd` into the unpacked directory, then type `make`:
 
@@ -31,7 +31,9 @@ $ make
 
 This will generate a C++ library called `liblangevin.so`, as well as a standalone program called `langevin`.
 
-## Usage - Python
+## Usage 
+
+### Python
 
 ```python
 from pylangevin import Langevin
@@ -40,21 +42,22 @@ simulation = pylangevin.Langevin(options)
 simulation.run(outputfilename, nsteps, nsnapshots)
 ```
 
-## Usage - Standalone
+#### Standalone
+
+The single-threaded standalone program is useful for running on HPC systems, for example when you 
+want to carry out repeated runs with the same set of parameters. The program takes the following
+required command-line arguments.
 
 ```bash
 $ ./langevin -o tests/test_trajectory2.h5 -p tests/test_potential.h5 \
              -c 0.,1.,0.,1. -s 0.5,0.0 -g 10 -m 63.456 -l 2.45 \
-             -t 500 -d 0.5 -r 1 -n 10000000 -i 10000
+             -t 500 -d 0.5 -n 10000000 -i 10000
 ```
+
+You can also specify a random seed using the flag `-r seed`.
 
 ## Tasks
 
-- [x] Convert to object-oriented model
-- [x] Python wrapper
-- [x] Remove dependency on Armadillo
-- [ ] Standalone program needs to take arguments
-- [x] Setup conversion for reduced units
 - [ ] Write simple test function
 - [ ] Basic documentation
 - [ ] Examples
