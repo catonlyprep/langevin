@@ -48,10 +48,12 @@ langevin
 
 # Directories
 output
+report
 process
-graphene
-graphene.py
 
 # HDF5
 *.h5
 !tests/test_potential.h5
+
+# Graphene
+graphene*

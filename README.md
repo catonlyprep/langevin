@@ -12,7 +12,8 @@ to model a particle diffusing on a surface.
 #### Dependencies
 
 The Langevin simulator uses 2D interpolation functions from version 2.1 of the  **[GNU Scientific Library](https://www.gnu.org/software/gsl/)**,
-so please make sure you use the latest version.
+so please make sure you use the latest version. It also uses the [HDF5 format](https://www.hdfgroup.org/HDF5/) to load and save potentials
+and trajectories.
 
 #### Building from source
 
@@ -50,6 +51,10 @@ $ ./langevin -o tests/test_trajectory2.h5 -p tests/test_potential.h5 \
 ```
 
 You can also specify a random seed using the flag `-r [seed]`.
+
+#### Generating your own potentials
+
+Will be expanded on here.
 
 ## Tasks
 
