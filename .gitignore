@@ -45,6 +45,7 @@
 
 # Programs
 langevin
+langevin.static
 
 # Directories
 output
@@ -57,3 +58,6 @@ process
 
 # Graphene
 graphene*
+
+# Static Makefile
+Makefile.static

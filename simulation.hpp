@@ -98,8 +98,12 @@ class Simulation {
 		// Run the simulation
 		void run() {
 			
-			// Start the timer		
-			time_start = std::chrono::steady_clock::now();		
+			// Start the timer
+			#if __cplusplus <= 199711L	
+				time_start = std::chrono::monotonic_clock::now();	
+			#else
+				time_start = std::chrono::steady_clock::now();	
+			#endif	
 			std::cout<<"  0% complete"<<std::endl;
 		
 			// Start the simulation			
@@ -122,7 +126,11 @@ class Simulation {
 			}
 					
 			// Report timing
-			time_end = std::chrono::steady_clock::now();
+			#if __cplusplus <= 199711L	
+				time_end = std::chrono::monotonic_clock::now();	
+			#else
+				time_end = std::chrono::steady_clock::now();	
+			#endif
 			run_time = (std::chrono::duration_cast<std::chrono::microseconds>(time_end - time_start).count()/1E6);
 			std::cout<<std::endl<<"Total time: "<<std::setprecision(5)<<run_time<<" seconds"<<std::endl<<std::endl;	
 		
@@ -135,7 +143,12 @@ class Simulation {
 		std::normal_distribution<double> NormalDistribution {0, 1};
 		
 		// Timing
-		std::chrono::time_point<std::chrono::steady_clock> time_start, time_end;
+		#if __cplusplus <= 199711L	
+				std::chrono::time_point<std::chrono::monotonic_clock> time_start, time_end;
+		#else
+				std::chrono::time_point<std::chrono::steady_clock> time_start, time_end;
+		#endif
+		
 		
 		// Parameters
 		int n, s, ncur, scur;
