@@ -3,7 +3,7 @@
 language: cpp
 
 compiler:
-    - g++
+    - gcc
     
 addons:
     apt:
@@ -11,13 +11,14 @@ addons:
         - ubuntu-toolchain-r-test
         packages:
         - gcc-4.8
-        - g++4.8
+        - g++-4.8
         - libhdf5-dev
    
 install:
     - if [ "$CXX" = "g++"]; then export CXX="g++-4.8" CC="gcc-4.8"; f
 
-script: make 
+script: 
+    - make 
 
 notifications:
     email: false
