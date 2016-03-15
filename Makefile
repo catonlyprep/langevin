@@ -1,3 +1,4 @@
+CXX = g++
 CXXFLAGS = -O3 -fPIC -Wall -std=c++11 -march=native
 LFLAGS = -lgsl -lgslcblas -lhdf5_cpp -lhdf5
 
