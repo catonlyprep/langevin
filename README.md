@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.org/tjof2/langevin.svg?branch=master)](https://travis-ci.org/tjof2/langevin)
-
 # Langevin
 
 **Simple Langevin Dynamics simulator for a particle in a 2D potential**
 
 This is a simple Langevin Dynamics simulator for a particle moving in a 2D potential, for example 
 to model a particle diffusing on a surface.
+
+[![Build Status](https://travis-ci.org/tjof2/langevin.svg?branch=master)](https://travis-ci.org/tjof2/langevin)
 
 ---
 
