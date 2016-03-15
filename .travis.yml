@@ -1,0 +1,20 @@
+# Travis file
+
+language: cpp
+
+compiler:
+    - g++
+    
+addons:
+    apt:
+        sources:
+        - ubuntu-toolchain-r-test
+        packages:
+        - gcc-4.8
+        - g++4.8
+        - libhdf5-dev
+   
+install:
+    - if [ "$CXX" = "g++"]; then export CXX="g++-4.8" CC="gcc-4.8"; f
+
+script: make 
