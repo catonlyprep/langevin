@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tjof2/langevin.svg?branch=master)](https://travis-ci.org/tjof2/langevin)
+
 # Langevin
 
 **Simple Langevin Dynamics simulator for a particle in a 2D potential**
