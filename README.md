@@ -13,8 +13,12 @@ to model a particle diffusing on a surface.
 
 #### Dependencies
 
+Tested on Linux with `gcc-4.8+` and `clang-3.6`.
+
 The Langevin simulator uses 2D interpolation functions from version 2.1 of the  **[GNU Scientific Library](https://www.gnu.org/software/gsl/)**,
-so please make sure you use the latest version. It also uses the [HDF5 format](https://www.hdfgroup.org/HDF5/) to load and save potentials
+so please make sure you use the latest version. You can install it by running `install-gsl.sh` in the terminal.
+
+This project also uses the [HDF5 format](https://www.hdfgroup.org/HDF5/) to load and save potentials
 and trajectories.
 
 #### Building from source
@@ -43,10 +47,13 @@ simulation.run(outputfilename, nsteps, nsnapshots)
 #### Standalone
 
 The single-threaded standalone program is useful for running on HPC systems, for example when you 
-want to carry out repeated runs with the same set of parameters. The program takes the following
-required command-line arguments.
+want to carry out repeated runs with the same set of parameters. Type
 
 ```bash
+$ # For detailed guidance on parameters
+$ ./langevin --usage
+$
+$ # Example usage
 $ ./langevin -o tests/test_trajectory2.h5 -p tests/test_potential.h5 \
              -c 0.,1.,0.,1. -s 0.5,0.0 -g 10 -m 63.456 -l 2.45 \
              -t 500 -d 0.5 -n 10000000 -i 10000
@@ -61,7 +68,6 @@ Will be expanded on here.
 ## Tasks
 
 - [ ] Write simple test function
-- [ ] Basic documentation
-- [ ] Examples
+- [ ] Generating potentials
 
 

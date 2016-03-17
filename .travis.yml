@@ -5,7 +5,7 @@ language: generic
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq -y libhdf5-serial-dev
-  - ./install-gsl.sh
+  - ./install-gsl.sh > gsl-log-file 2>&1
   
 matrix:
   include:
@@ -14,29 +14,29 @@ matrix:
         apt:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-4.8']
-      env: COMPILER_NAME=gcc CXX=g++-4.8 CC=gcc-4.8
+      env: COMPILER_NAME=gcc CXX=g++-4.8
 
     - os: linux
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-4.9']
-      env: COMPILER_NAME=gcc CXX=g++-4.9 CC=gcc-4.9
+      env: COMPILER_NAME=gcc CXX=g++-4.9
 
     - os: linux
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test']
           packages: ['g++-5']
-      env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
-
+      env: COMPILER_NAME=gcc CXX=g++-5 
+      
     - os: linux
       compiler: clang
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-precise-3.6']
           packages: ['clang-3.6']
-      env: COMPILER=clang++-3.6
+      env: COMPILER_NAME=clang++-3.6 CXX=clang++-3.6
 
 script: 
   - make CXX=$CXX

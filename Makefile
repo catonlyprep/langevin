@@ -11,7 +11,7 @@ TARGETEXE = langevin
 TARGETLIB = liblangevin.so
 
 # Source & object files
-SRCS = langevin.cpp
+SRCS = src/langevin.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 .PHONY: all
