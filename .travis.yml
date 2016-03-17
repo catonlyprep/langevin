@@ -1,9 +1,6 @@
 # Travis file
 
 language: cpp
-
-compiler:
-  - gcc
     
 before_install:
   - sudo apt-get update -qq
