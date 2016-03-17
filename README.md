@@ -2,9 +2,6 @@
 
 **Simple Langevin Dynamics simulator for a particle in a 2D potential**
 
-This is a simple Langevin Dynamics simulator for a particle moving in a 2D potential, for example 
-to model a particle diffusing on a surface.
-
 [![Build Status](https://travis-ci.org/tjof2/langevin.svg?branch=master)](https://travis-ci.org/tjof2/langevin)
 
 ---
@@ -47,14 +44,14 @@ simulation.run(outputfilename, nsteps, nsnapshots)
 #### Standalone
 
 The single-threaded standalone program is useful for running on HPC systems, for example when you 
-want to carry out repeated runs with the same set of parameters. Type
+want to carry out repeated runs with the same set of parameters.
 
 ```bash
 $ # For detailed guidance on parameters
 $ ./langevin --usage
 $
 $ # Example usage
-$ ./langevin -o tests/test_trajectory2.h5 -p tests/test_potential.h5 \
+$ ./langevin -o tests/test_trajectory.h5 -p tests/test_potential.h5 \
              -c 0.,1.,0.,1. -s 0.5,0.0 -g 10 -m 63.456 -l 2.45 \
              -t 500 -d 0.5 -n 10000000 -i 10000
 ```
