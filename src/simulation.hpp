@@ -71,8 +71,8 @@ class Simulation {
 
 		// Set the initial momentum
 		void momentum(double x, double y) {
-			px = 0.;
-			py = 0.;
+			px = x;
+			py = y;
 			return;
 		}
 
