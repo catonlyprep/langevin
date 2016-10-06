@@ -42,7 +42,7 @@ extern "C" int LangevinSimulator(
 	std::cout<<"2D Langevin Dynamics Simulator"<<std::endl<<std::endl;
 	std::cout<<"Author: Tom Furnival"<<std::endl;
 	std::cout<<"Email:  tjof2@cam.ac.uk"<<std::endl;
-	std::cout<<std::string(30,'-')<<std::endl<<std::endl;
+	std::cout<<std::string(30,'-')<<std::endl;
 
 	std::string PotentialFileName(potential);
 	std::string TrajectoryFileName(trajectory);

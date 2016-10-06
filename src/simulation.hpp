@@ -135,7 +135,7 @@ class Simulation {
 				time_end = std::chrono::steady_clock::now();
 			#endif
 			run_time = (std::chrono::duration_cast<std::chrono::microseconds>(time_end - time_start).count()/1E6);
-			std::cout<<std::endl<<"Total time: "<<std::setprecision(5)<<run_time<<" seconds"<<std::endl<<std::endl;
+			std::cout<<std::endl<<"Total time: "<<std::setprecision(5)<<run_time<<" seconds"<<std::endl;
 
 			return;
 		};
