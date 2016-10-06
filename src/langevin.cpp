@@ -104,6 +104,7 @@ int main(int argc, const char * argv[]) {
 	opt.add("", 1, 1, 0, "Filename for input potential in HDF5 format", "-p","-potential");
 	opt.add("0,1,0,1", 1, 4, ',', "Simulation cell size: x1,x2,y1,y2", "-c", "-cell");
 	opt.add("0,0", 1, 2, ',', "Particle starting position: x,y", "-s", "-start");
+	opt.add("0,0", 1, 2, ',', "Particle starting momentum: px,py", "-q", "-momentum");
 	opt.add("1", 1,	1, 0, "Friction coefficient, gamma", "-g", "-gamma");
 	opt.add("1", 1,	1, 0, "Mass (a.m.u)", "-m", "-mass");
 	opt.add("1", 1,	1, 0, "Length (Angstroms)", "-l", "-length");
