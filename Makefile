@@ -19,7 +19,7 @@ all: $(TARGETEXE) $(TARGETLIB)
 
 $(TARGETEXE): $(OBJS)
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LFLAGS)
-	
+
 $(TARGETLIB): $(OBJS)
 	$(CXX) $(CXXFLAGS) -shared $^ -o $@ $(LFLAGS)
 
